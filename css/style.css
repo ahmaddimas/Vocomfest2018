@@ -1,0 +1,237 @@
+/* Font Face */
+@font-face {
+  src: url('../webfonts/OpenSans-Regular.ttf');
+  font-family: 'opensans';
+}
+@font-face {
+  src: url('../webfonts/OpenSans-Light.ttf');
+  font-family: 'opensans-light';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'opensans';
+}
+html, body {
+  width: 100%;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+/* a:active {
+  color: black;
+} */
+
+/* PAGE LOADER */
+#loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #ffffff;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  z-index: 999;
+  text-align: center;
+}
+#loader .icon {
+  /* font-size: 52px; */
+  margin-bottom: 10px;
+}
+/* END of PAGE LOADER */
+
+/* HEADER */
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  background-color: transparent;
+  color: rgba(230, 230, 230, 1);
+  padding: 30px 30px;
+  padding-left: 50px !important;
+  box-sizing: border-box;
+}
+header.inverse {
+  background-color: #ffffff;
+  /*background-color: #414141;*/
+  color: #90CAF9;
+  padding: 15px 30px;
+}
+.below-shadow {
+  /*box-shadow: 0 4px 2px -2px rgb(200, 200, 200);*/
+  box-shadow: 0 4px 2px -2px #2196F3;
+}
+header a {
+  /* color: rgba(230, 230, 230, 1); */
+}
+.nav-brand {
+  float: left;
+}
+header, header a, .nav-toggle, .nav-brand img {
+  transition: .5s ease-in-out;
+}
+.nav-brand img{
+  width: 40px;
+}
+header.inverse ul.nav-menu .link {
+  color: #90CAF9;
+}
+ul.nav-menu .link {
+  color: rgba(230, 230, 230, 1) !important;
+  transition: .3s ease-in-out;
+}
+ul.nav-menu .link.inverse {
+  /*color: #90CAF9 !important;*/
+  color: #2196F3 !important;
+  /*color: #FF7800 !important;*/
+}
+ul.nav-menu li:hover .link {
+  color: white !important;
+}
+ul.nav-menu li:hover .link.inverse {
+  color: #2196F3 !important;
+  /*color: #FF5400 !important;*/
+}
+
+/* STYLE for MEDIUM and HIGHER SCREEN */
+@media screen and (min-width: 768px) {
+  .nav-toggle {
+    display: none;
+  }
+  #navbarMenu {
+    display: block;
+  }
+  ul.nav-menu {
+    list-style: none;
+    float: right;
+    overflow: hidden;
+    margin: 0;
+  }
+  ul.nav-menu li {
+    float: left;
+    padding: 5px 10px;
+    margin: 0px 8px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+  }
+  ul.nav-menu li::before {
+    content: '';
+    position: absolute;
+    background-color: #ffffff;
+    height: 1px;
+    width: 0px;
+    bottom: 0;
+    left: 0;
+    transition: .3s ease-in-out;
+  }
+  ul.nav-menu li.inverse::before {
+    background-color: #2196F3;
+  }
+  ul.nav-menu li:hover::before {
+    width: 100%;
+  }
+}
+
+/* STYLE for SMALL SCREEN */
+@media screen and (max-width: 767px) {
+  header {
+    padding-left: 25px !important;
+  }
+  .nav-toggle {
+    width: 36px;
+    height: 36px;
+    float: right;
+    border-radius: 5px;
+    font-size: 22px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+  }
+  .icon-bar {
+    width: 100%;
+    align-self: center;
+    height: 2px;
+    position: relative;
+    transition: .5s ease-in-out;
+  }
+  .icon-bar::before {
+    width: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-13px);
+    height: 100%;
+    transition: .5s ease-in-out;
+  }
+  .icon-bar::after {
+    width: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(13px);
+    height: 100%;
+    transition: .5s ease-in-out;
+  }
+  .icon-bar.clicked {
+    background-color: transparent;
+  }
+  .icon-bar.clicked::before {
+    transform: rotateZ(45deg);
+  }
+  .icon-bar.clicked::after {
+    transform: rotateZ(-45deg);
+  }
+  .icon-white {
+    background-color: #ffffff;
+  }
+  .icon-white::before {
+    background-color: #ffffff;
+  }
+  .icon-white::after {
+    background-color: #ffffff;
+  }
+  .icon-inverse {
+    background-color: #2196F3;
+  }
+  .icon-inverse::before {
+    background-color: #2196F3;
+  }
+  .icon-inverse::after {
+    background-color: #2196F3;
+  }
+  #navbarMenu {
+    margin-top: 50px;
+    display: none;
+    background-color: #ffffff;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    padding-right: 30px;
+  }
+  ul.nav-menu {
+    list-style: none;
+    margin: 0px;
+    width: 100%;
+    color: #2196F3;
+    padding: 0;
+  }
+  ul.nav-menu li {
+    padding: 5px 10px;
+    margin: 8px 0px;
+    cursor: pointer;
+    text-align: right;
+  }
+  ul.nav-menu .link.inverse {
+    color: #2196F3 !important;
+  }
+}
+/* END of HEADER */
