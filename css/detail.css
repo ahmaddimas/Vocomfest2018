@@ -16,19 +16,48 @@
   padding: 20px 0 50px; 
 }
 .content .img-header {
+  position: relative;
   height: 350px;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
-  background: url('../images/bromo.jpg');
+  background: url('../images/bromo1.jpg');
+  display: grid;
+}
+.content .img-header .img-texture{
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  height: 24px;
+  justify-self: center;
+  background-size: 100% 100% !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background: url('../images/texture-bottom2.png');
+  z-index: 1;
+}
+.content .img-header .img-bg{
+  z-index: 0;
+  position: absolute;
+  background-color: black;
+  bottom: 0;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  justify-self: center;
+  background-size: 100% 100% !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
 }
 .content .img-header h1{
-  position: relative;
-  top: 43%;
+  /*position: relative;
+  top: 43%;*/
+  align-self: center;
   text-align: center;
   color: white;
   font-size: 32pt;
   letter-spacing: 3px;
+  z-index: 1;
 }
 .content .content-detail{
   width: 100%;
@@ -44,7 +73,8 @@
   font-size: 20pt;
 }
 .content .content-detail .title i{
-  color: #F47427;
+  /*color: #F47427;*/
+  color: #2196F3;
   font-size: 42pt;
 }
 .content .content-detail .detail{
@@ -60,6 +90,25 @@
   background-position: center center !important;
   background-repeat: no-repeat !important;
   background: url('../images/bromo2.jpg');
+  position: relative;
+  display: grid;
+}
+.content .img-detail .img-texture{
+  position: absolute;
+  width: 80%;
+  height: 24px;
+  justify-self: center;
+  background-size: 100% 100% !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+.content .img-detail .img-texture:nth-child(1) {
+  top: 0;
+  background: url('../images/texture-top2.png');
+}
+.content .img-detail .img-texture:nth-child(2) {
+  bottom: 0;
+  background: url('../images/texture-bottom2.png');
 }
 .lodge{
   height: auto;
@@ -234,6 +283,12 @@ footer {
   .content .img-detail {
     height: 60vh;
   }
+  .content .img-header .img-texture, .content .img-detail .img-texture {
+    width: 100%;
+  }
+  .content .content-detail .detail{
+    width: 80%;
+  }
   .lodge .lodge-content{
     grid-template-columns: 1fr 1fr;
   }
@@ -255,6 +310,12 @@ footer {
 @media screen and (max-width: 575px) {
   .content .img-detail {
     height: 40vh;
+  }
+  .content .img-header .img-texture, .content .img-detail .img-texture {
+    width: 100%;
+  }
+  .content .content-detail .detail{
+    width: 80%;
   }
   .lodge .lodge-content{
     grid-template-columns: 1fr;

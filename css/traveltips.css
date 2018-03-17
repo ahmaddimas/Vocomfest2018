@@ -1,0 +1,222 @@
+/* INTRO with PARALLAX */
+.intro {
+  width: 100%;
+  height: 80%;
+  /*background: url('http://fertilitymatters.ca/wp-content/uploads/2017/07/lion-wild-africa-african.jpg');*/
+   background: url('../images/ijen.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.intro > .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+.intro-content {
+  display: block;
+  margin: auto;
+  color: white;
+  z-index: 0;
+  text-align: center;
+}
+.intro-content .title {
+  font-size: 60px;
+  transform: translateY(-10px);
+  text-align: center;
+}
+.intro-content .description {
+  font-family: opensans-light;
+  font-style: italic;
+  text-align: center;
+}
+/* END of INTRO */
+
+/*PAGE WRAPPER*/
+.container {
+  width: 85%;
+  margin: auto;
+  display: block;
+  padding: 20px 0 50px;
+}
+.lodge{
+  height: auto;
+  background-color: #FBFBFB;
+  width: 100%;
+}
+.lodge h1{
+  text-align: center;
+  padding: 20px 0;
+}
+.lodge .lodge-content{
+  display: grid;
+  margin: 0px auto;
+  width: 90%;
+  padding: 50px 0;
+}
+.lodge .lodge-content .item{
+  grid-auto-rows: minmax(500px, auto);
+  width: 100%;
+  height: 400px;
+  background-position: center center !important;
+  margin-top: 30px;
+}
+.lodge .lodge-content .item .image{
+  background-color: pink;
+  grid-auto-rows: minmax(400px, auto);
+  height: 400px;
+  width: 68%;
+  background-position: center center !important;
+  float: left;
+}
+.lodge .lodge-content .item .desc{
+  border-top: 2px solid #E4E4E4;
+  border-bottom: 2px solid #E4E4E4;
+  float: right;
+  width: 30%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.lodge .lodge-content .item .desc h1{
+  font-size: 16pt;
+  padding: 5px;
+}
+.lodge .lodge-content .item .desc p{
+  font-size: 10pt;
+  margin: 0px auto;
+  width: 100%;
+  padding-top: 10px;
+  text-align: justify;
+  box-sizing: border-box;
+}
+.lodge-content .item:nth-child(1) .image{
+  background: url('../images/alunalunkidul.jpg');
+  background-size: cover !important;
+}
+#langganan {
+  background-color: #2196F3;
+  color: white;
+  padding: 20px 0;
+}
+.subscribe {
+  text-align: center;
+  display: grid;
+}
+.subscribe > .title {
+  font-family: opensans-light;
+}
+.subscribe > hr {
+  border: 0.5px solid #ffffff;
+  margin: 10px;
+}
+.subscribe form {
+  justify-self: center;
+  text-align: left;
+  /* background-color: red; */
+}
+.subscribe form .input {
+  display: grid;
+}
+.subscribe form .input * {
+  margin: 5px 0;
+}
+.subscribe form .input input {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+}
+.subscribe form .input input::placeholder {
+  font-size: 16px;
+}
+.subscribe form .btn-subscribe {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  transition: .3s ease;
+}
+#footer {
+  background-color: #F6F6F6;
+  padding: 20px 0;
+}
+#footer .container {
+  display: grid;
+  grid-gap: 1em;
+}
+footer {
+  padding: 10px;
+  background-color: #2196F3;
+  text-align: center;
+  color: white;
+}
+
+/* STYLE for MEDIUM and HIGHER SCREEN */
+@media screen and (min-width: 768px) {
+  .lodge .lodge-content{
+    grid-template-columns: 1fr;
+  }
+  .subscribe form {
+    width: 70%;
+  }
+  .subscribe form .input {
+    grid-template-columns: 1fr 3fr;
+  }
+  .subscribe form .btn-subscribe:hover {
+    color: #2196F3;
+    background-color: white;
+  }
+  #footer .container {
+    grid-template-columns: 3fr 2fr 1fr;
+  }
+}
+
+/* STYLE for SMALL SCREEN */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .subscribe form {
+    width: 100%;
+  }
+  .subscribe form .input {
+    grid-template-columns: 1fr 2fr;
+  }
+  #footer .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  #footer .container .content:nth-child(1) {
+    grid-column: 1/3;
+  }
+}
+
+/* STYLE for EXTRA SMALL SCREEN */
+@media screen and (max-width: 575px) {
+  .facilities .title {
+    font-size: 1.8em;
+  }
+  .facilities-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(200px, auto);
+    grid-gap: 1em;
+  }
+  .facilities-items .middle-item {
+    display: none;
+  }
+  .subscribe form {
+    width: 100%;
+  }
+  #footer .container {
+    grid-template-columns: 1fr;
+  }
+}
+/*END of PAGE WRAPPER*/
