@@ -75,22 +75,73 @@
   display: block;
   padding: 20px 0 50px;
 }
-#fasilitas {
+.article:nth-child(odd) {
   background-color: #F6F6F6;
 }
-.facilities {
-  width: 100%;
-  overflow: hidden;
+.article:nth-child(even) {
+  background-color: white;
 }
-.facilities .title {
-  transition: .3s ease;
+.article > div > .title {
   text-align: center;
-  margin: 20px 0;
-  font-weight: lighter;
-  font-style: italic;
 }
-.facilities-items .middle-item img{
+.article .items-wrapper {
+  display: grid;
+  margin-top: 20px;
+  grid-gap: 1em;
+}
+.article .items-wrapper .item {
+  border: 2px solid rgb(220, 220, 220);
+  box-shadow: 7px 7px 3px rgb(200, 200, 200);
+  transition: .1s ease;
+}
+.article .items-wrapper .item:hover {
+  box-shadow: 2px 2px 3px rgb(200, 200, 200);
+}
+.article .items-wrapper .item > .image {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  transition: .3s ease;
+  height: 250px;
+}
+.article .items-wrapper .item .image .overlay {
   width: 100%;
+  height: 100%;
+  background-color: rgba(38, 38, 38, 0.2);
+}
+.article .items-wrapper .item .detail {
+  padding: 10px;
+  box-sizing: border-box;
+  height: 150px;
+}
+.article .items-wrapper .item:nth-child(1) .image {
+  background: url('../images/bromo.jpg');
+}
+.article .items-wrapper .item:nth-child(2) .image {
+  background: url('../images/bromo2.jpg');
+}
+.article .items-wrapper .item:nth-child(3) .image {
+  background: url('../images/bali.jpg');
+}
+.article .items-wrapper .item:nth-child(4) .image {
+  background: url('../images/tamansari.jpg');
+}
+.article .link-more {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 250px;
+  padding: 10px;
+  border: 2px solid #2196F3;
+  color: #2196F3;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: .3s ease;
+}
+.article .link-more:hover {
+  background-color: #2196F3;
+  color: white;
 }
 .destination {
   width: 100%;
@@ -139,68 +190,6 @@
   letter-spacing: 3px;
   font-size: 24px;
   font-family: opensans-light;
-}
-.loudge > .title {
-  text-align: center;
-}
-.loudge .items-wrapper {
-  display: grid;
-  margin-top: 20px;
-  grid-gap: 1em;
-}
-.loudge .items-wrapper .item {
-  border: 2px solid rgb(220, 220, 220);
-  box-shadow: 7px 7px 3px rgb(200, 200, 200);
-  transition: .1s ease;
-}
-.loudge .items-wrapper .item:hover {
-  box-shadow: 2px 2px 3px rgb(200, 200, 200);
-}
-.loudge .items-wrapper .item > .image {
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  transition: .3s ease;
-  height: 250px;
-}
-.loudge .items-wrapper .item .image .overlay {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(38, 38, 38, 0.2);
-}
-.loudge .items-wrapper .item .detail {
-  padding: 10px;
-  box-sizing: border-box;
-  height: 150px;
-}
-.loudge .items-wrapper .item:nth-child(1) .image {
-  background: url('../images/bromo.jpg');
-}
-.loudge .items-wrapper .item:nth-child(2) .image {
-  background: url('../images/bromo2.jpg');
-}
-.loudge .items-wrapper .item:nth-child(3) .image {
-  background: url('../images/bali.jpg');
-}
-.loudge .items-wrapper .item:nth-child(4) .image {
-  background: url('../images/tamansari.jpg');
-}
-.loudge .link-more {
-  display: block;
-  margin: 0 auto;
-  margin-top: 20px;
-  width: 250px;
-  padding: 10px;
-  border: 2px solid #2196F3;
-  color: #2196F3;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  transition: .3s ease;
-}
-.loudge .link-more:hover {
-  background-color: #2196F3;
-  color: white;
 }
 #galeri {
   padding: 30px 0;
@@ -282,7 +271,6 @@
   color: white;
 }
 #langganan {
-  background-color: #2196F3;
   color: white;
   padding: 20px 0;
 }
@@ -328,8 +316,12 @@
   transition: .3s ease;
 }
 #footer {
-  background-color: #F6F6F6;
+  /* background-color: #F6F6F6; */
   padding: 20px 0;
+  color: white;
+}
+#footer a {
+  color: white;
 }
 #footer .container {
   display: grid;
@@ -337,9 +329,11 @@
 }
 footer {
   padding: 10px;
-  background-color: #2196F3;
   text-align: center;
   color: white;
+}
+#langganan, #footer, footer {
+  background-color: #0066b6;
 }
 
 /* STYLE for MEDIUM and HIGHER SCREEN */
@@ -407,7 +401,7 @@ footer {
     text-transform: uppercase;
     color: white;
   }
-  .loudge .items-wrapper {
+  .article .items-wrapper {
     grid-template-columns: repeat(4, 1fr);
   }
   .gallery > .title span {
@@ -538,7 +532,7 @@ footer {
   .destination .item:hover .wrapper {
     background-color: rgba(38, 38, 38, 0.25);
   }
-  .loudge .items-wrapper {
+  .article .items-wrapper {
     grid-template-columns: 1fr 1fr;
   }
   .gallery .items-wrapper {

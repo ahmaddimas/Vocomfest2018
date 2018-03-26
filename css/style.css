@@ -80,20 +80,11 @@ header.inverse ul.nav-menu .link {
   color: #90CAF9;
 }
 ul.nav-menu .link {
-  color: rgba(230, 230, 230, 1) !important;
+  color: white !important;
   transition: .3s ease-in-out;
 }
 ul.nav-menu .link.inverse {
-  /*color: #90CAF9 !important;*/
   color: #2196F3 !important;
-  /*color: #FF7800 !important;*/
-}
-ul.nav-menu li:hover .link {
-  color: white !important;
-}
-ul.nav-menu li:hover .link.inverse {
-  color: #2196F3 !important;
-  /*color: #FF5400 !important;*/
 }
 
 /* STYLE for MEDIUM and HIGHER SCREEN */
