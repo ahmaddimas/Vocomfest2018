@@ -30,9 +30,9 @@
         <ul class="nav-menu">
           <li><a href="index.html" class="link">Home</a></li>
           <li><a href="destinasi.html" class="link">Destination</a></li>
-          <li><a href="" class="link">Lodge</a></li>
-          <li><a href="" class="link">Gallery</a></li>
-          <li><a href="traveltips.html" class="link">Travel Tips</a></li>
+          <li><a href="" class="link">Article</a></li>
+          <li><a href="gallery.html" class="link">Gallery</a></li>
+          <li><a href="travelt.html" class="link">Travel Tips</a></li>
           <li><i class="fas fa-search link"></i></li>
         </ul>
       </nav>
@@ -53,7 +53,7 @@
       <div class="gallery">
         <div class="items-wrapper">
           <div class="item">
-            <div class="image">
+            <div class="image" data-source="images/bromo.jpg">
               <div class="overlay">
                 <i class="fas fa-search"></i>
               </div>
@@ -62,7 +62,7 @@
             <p class="place"><i class="fas fa-map-marker-alt"></i> &nbsp; jawa timur</p>
           </div>
           <div class="item">
-            <div class="image">
+            <div class="image" data-source="images/ijen.jpg">
               <div class="overlay">
                 <i class="fas fa-search"></i>
               </div>
@@ -71,7 +71,7 @@
             <p class="place"><i class="fas fa-map-marker-alt"></i> &nbsp; jawa timur</p>
           </div>
           <div class="item">
-            <div class="image">
+            <div class="image" data-source="images/tamansari.jpg">
               <div class="overlay">
                 <i class="fas fa-search"></i>
               </div>
@@ -80,7 +80,7 @@
             <p class="place"><i class="fas fa-map-marker-alt"></i> &nbsp; jawa timur</p>
           </div>
           <div class="item">
-            <div class="image">
+            <div class="image" data-source="images/bali.jpg">
               <div class="overlay">
                 <i class="fas fa-search"></i>
               </div>
@@ -91,7 +91,10 @@
         </div>
 
         <!-- MODAL IMAGE -->
-        <div class="modal"></div>
+        <div class="modal">
+          <div class="overlay"></div>
+          <div class="image" data-source=""></div>
+        </div>
         <!-- END of MODAL IMAGE -->
       </div>
       <!-- END of GALLERY -->
@@ -101,5 +104,15 @@
     <!-- JavaScript -->
     <script src="js/jquery.min.js" charset="utf-8"></script>
     <script src="js/main.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $('.gallery .items-wrapper .item .image').click(function (event) {
+        var source = $(this).attr('data-source');
+        $('.modal .image').css("background", "url('"+ source +"')");
+        $('.modal').fadeIn('slow');
+      });
+      $('.modal .overlay').click(function (event) {
+        $(this).parents('.modal').fadeOut('slow');
+      });
+    </script>
   </body>
 </html>
