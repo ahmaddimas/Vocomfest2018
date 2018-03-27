@@ -66,30 +66,104 @@ body{
 .tips .tips-content{
   height: auto;
   background-color: #7e6f66;
-  width: 60%;
+  width: 65%;
   float: left;
+  margin-bottom: 50px;
 }
 .tips .tips-content p{
   padding: 50px;
   color: #F1EEE8;
   line-height: 20px;
 }
-.tips .related-tips{
-  padding: 20px;
+.tips .other-tips{
+  padding: 15px;
   height: auto;
   background-color: #7e6f66;
   width: 30%;
   float: right;
 }
-.tips .related-tips h1{
+.tips .other-tips h1{
   color: #F1EEE8;
   height: auto;
 }
-.tips .related-tips a{
-  padding: 0 10px;
+.tips .other-tips a{
+  padding: 0 5px;
   color: #F1EEE8;
   height: auto;
 }
-.tips .related-tips ul{
+.tips .other-tips ul{
+  padding: 10px;
+  list-style: none;
+}
+.tips .other-tips li{
+  padding-top: 10px;
+}
+.tips .other-tips .img-other{
   padding: 0 20px;
+  width: 50px;
+  height: 40px;
+  float: left;
+}
+.tips .other-tips .img-other img{
+  border: 1px solid white;
+  width: 100%;
+  height: 100%;
+}
+.tips .gallery{
+  margin-top: 20px;
+  padding: 15px;
+  height: auto;
+  background-color: #7e6f66;
+  width: 30%;
+  float: right;
+}
+.tips .gallery h1{
+  color: #F1EEE8;
+  height: auto;
+}
+.tips .gallery .gallery-content{
+  display: grid;
+  width: 100%;
+  margin: 0px auto;
+  padding: 10px 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.tips .gallery .gallery-content .item{
+  grid-auto-rows: minmax(80px, auto);
+  background-position: center center !important;
+  box-sizing: border-box;
+  height: 80px;
+  width: 100%;
+}
+.tips .gallery-content .item:nth-child(1){
+  background: url('../images/bromo1.jpg');
+  background-size: cover !important;
+}
+.tips .gallery-content .item:nth-child(2){
+  background: url('../images/bromo.jpg');
+  background-size: cover !important;
+}
+.tips .gallery-content .item:nth-child(3){
+  background: url('../images/terasering.jpg');
+  background-size: cover !important;
+}
+.tips .gallery-content .item:nth-child(4){
+  background: url('../images/alunalunkidul.jpg');
+  background-size: cover !important;
+}
+.tips .gallery-content .item:nth-child(5){
+  background: url('../images/bromo2.jpg');
+  background-size: cover !important;
+}
+.tips .gallery-content .item:nth-child(6){
+  background: url('../images/tamansari.jpg');
+  background-size: cover !important;
+}
+.tips .gallery-content .item:nth-child(7){
+  background: url('../images/ijen.jpg');
+  background-size: cover !important;
+}
+.tips .gallery-content .item:nth-child(8){
+  background: url('../images/bali.jpg');
+  background-size: cover !important;
 }
