@@ -2,6 +2,14 @@ window.onload = function() {
   $('#loader').fadeOut()
 };
 
+setImg();
+$('.nav-search').click(function(event) {
+  $('.search-wrapper').slideDown(500);
+});
+$('.search-wrapper .close').click(function(event) {
+  $(this).parents('.search-wrapper').slideUp(500);
+});
+
 $(document).ready(function() {
   // parallax();
   // changeHeader();
@@ -10,10 +18,12 @@ $(document).ready(function() {
   $('#page-wrapper').css('padding-top', headerH + 'px')
 });
 
-$(window).scroll(function(event) {
-  // parallax();
-  // changeHeader();
-});
+function setImg() {
+  $('.image').each(function(index, el) {
+    var source = $(this).attr('data-source');
+    $(this).css('background', 'url("'+ source +'")');
+  });
+}
 
 $(window).resize(function(event) {
   var vw = window.innerWidth;

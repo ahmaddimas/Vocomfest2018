@@ -1,19 +1,17 @@
 /*PAGE WRAPPER*/
 .container {
-  width: 95%;
+  width: 85%;
   margin: auto;
   display: block;
   padding: 20px 0 50px;
 }
 #detail-destinasi {
-  /* background-color: #dbf1ff; */
   background-color: #FBFBFB;
 }
 .content {
   width: 100%;
   margin: auto;
   display: block;
-  padding: 20px 0 50px; 
 }
 .content .img-header {
   position: relative;
@@ -73,7 +71,6 @@
   font-size: 20pt;
 }
 .content .content-detail .title i{
-  /*color: #F47427;*/
   color: #2196F3;
   font-size: 42pt;
 }
@@ -124,7 +121,7 @@
   display: grid;
 }
 .lodge .lodge-content .item .image{
-  width: 300px;  
+  width: 300px;
   height: 300px;
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -142,17 +139,6 @@
   height: 300px;
   width: 100%;
   background-position: center center !important;
-}
-.lodge-content .item:nth-child(1) .image{
-  background: url('../images/bromo.jpg');
-  background-size: cover !important;
-}
-.lodge-content .item:nth-child(2) .image{
-  background: url('../images/bromo1.jpg');
-  background-size: cover !important;
-}
-.lodge-content .item:nth-child(3) .image{
-  background: url('../images/bali.jpg');
   background-size: cover !important;
 }
 .lodge .lodge-content .item .desc{
@@ -183,6 +169,7 @@
   height: auto;
   background-color: #FBFBFB;
   width: 100%;
+  padding-bottom: 70px;
 }
 .gallery h1{
   font-size: 16pt;
@@ -203,69 +190,9 @@
   grid-auto-rows: minmax(230px, auto);
   height: 230px;
   background-position: center center !important;
-}
-.gallery-content .item:nth-child(1){
-  background: url('../images/bromo.jpg');
   background-size: cover !important;
 }
-.gallery-content .item:nth-child(2){
-  background: url('../images/bali.jpg');
-  background-size: cover !important;
-}
-.gallery-content .item:nth-child(3){
-  background: url('../images/tamansari.jpg');
-  background-size: cover !important;
-}
-.gallery-content .item:nth-child(4){
-  background: url('../images/bromo.jpg');
-  background-size: cover !important;
-}
-.gallery-content .item:nth-child(5){
-  background: url('../images/bromo1.jpg');
-  background-size: cover !important;
-}
-.gallery-content .item:nth-child(6){
-  background: url('../images/tamansari.jpg');
-  background-size: cover !important;
-}
-.gallery-content .item:nth-child(7){
-  background: url('../images/tamansari.jpg');
-  background-size: cover !important;
-}
-.gallery-content .item:nth-child(8){
-  background: url('../images/bromo2.jpg');
-  background-size: cover !important;
-}
-.gallery-content .item:nth-child(9){
-  background: url('../images/bromo.jpg');
-  background-size: cover !important;
-}
-.gallery-content .item:nth-child(10){
-  background: url('../images/tamansari.jpg');
-  background-size: cover !important;
-}
-.gallery-content .item:nth-child(11){
-  background: url('../images/bali.jpg');
-  background-size: cover !important;
-}
-.gallery-content .item:nth-child(12){
-  background: url('../images/bromo.jpg');
-  background-size: cover !important;
-}
-#footer {
-  background-color: #F6F6F6;
-  padding: 20px 0;
-}
-#footer .container {
-  display: grid;
-  grid-gap: 1em;
-}
-footer {
-  padding: 10px;
-  background-color: #2196F3;
-  text-align: center;
-  color: white;
-}
+
 /* STYLE for MEDIUM and HIGHER SCREEN */
 @media screen and (min-width: 768px) {
   .lodge .lodge-content{
@@ -273,9 +200,6 @@ footer {
   }
   .gallery .gallery-content{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  }
-  #footer .container {
-    grid-template-columns: 3fr 2fr 1fr;
   }
 }
 /* STYLE for SMALL SCREEN */
@@ -297,12 +221,6 @@ footer {
   }
   .gallery .gallery-content{
     grid-template-columns: 1fr 1fr 1fr;
-  }
-  #footer .container {
-    grid-template-columns: 1fr 1fr;
-  }
-  #footer .container .content:nth-child(1) {
-    grid-column: 1/3;
   }
 }
 
@@ -346,9 +264,6 @@ footer {
   }
   .gallery .gallery-content .item:nth-child(12){
     display: none;
-  }
-  #footer .container {
-    grid-template-columns: 1fr;
   }
 }
 /*END of PAGE WRAPPER*/
