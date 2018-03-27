@@ -1,0 +1,95 @@
+body{
+  background-color: #F1EEE8;
+}
+/* INTRO with PARALLAX */
+.intro {
+  width: 100%;
+  height: 100%;
+  /*background: url('http://fertilitymatters.ca/wp-content/uploads/2017/07/lion-wild-africa-african.jpg');*/
+  background: url('../images/bridge.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.intro > .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(86, 86, 86, 0.5);
+
+  z-index: 0;
+}
+.intro-content {
+  display: block;
+  margin: auto;
+  color: white;
+  z-index: 0;
+  text-align: center;
+}
+.intro-content .title {
+  font-size: 60px;
+  transform: translateY(-10px);
+  text-align: center;
+}
+.intro-content .description {
+  font-family: opensans-light;
+  font-style: italic;
+  text-align: center;
+}
+/* END of INTRO */
+
+/*PAGE WRAPPER*/
+#page-wrapper {
+  height: auto;
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+.tips{
+  position: relative;
+  padding-top: 50px;
+  height: 100%;
+  width: 85%;
+  margin: 0px auto;
+}
+.tips .tips-content-img{
+  background: url('../images/bromo.jpg');
+  background-size: cover !important;
+  height: 350px;
+  width: 100%;
+}
+.tips .tips-content{
+  height: auto;
+  background-color: #7e6f66;
+  width: 60%;
+  float: left;
+}
+.tips .tips-content p{
+  padding: 50px;
+  color: #F1EEE8;
+  line-height: 20px;
+}
+.tips .related-tips{
+  padding: 20px;
+  height: auto;
+  background-color: #7e6f66;
+  width: 30%;
+  float: right;
+}
+.tips .related-tips h1{
+  color: #F1EEE8;
+  height: auto;
+}
+.tips .related-tips a{
+  padding: 0 10px;
+  color: #F1EEE8;
+  height: auto;
+}
+.tips .related-tips ul{
+  padding: 0 20px;
+}
